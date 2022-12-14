@@ -1,0 +1,180 @@
+:root{
+    --backgroundlight: #E2E6EB;
+    --backgroundtasklight: #D3D8DE;
+    --backgroundbutton: #3083FF;
+    --backgroundtextbox: #F6F7F8;
+    --backgorunddark: #0E0E0E;
+    --backgroundtaskdark: #141414;
+    --textlight: #1E1E1E;
+    --textdark: #BDC2C8;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--backgroundlight);
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    transition: all 1s ease-in-out;
+    background: var(--backgroundbutton);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    padding: 0px;   
+}
+
+body{
+    background: var(--backgroundlight);
+    color: var(--textlight);
+    min-height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+#form{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+
+#new-task-input{
+    width: 50%;
+    max-width: 500px;
+    background-color: var(--backgroundtextbox);
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    box-shadow: inset 0px 4px 0.5em rgb(199, 199, 199);
+}
+
+#new-task-input:focus{
+     box-shadow: 0px 4px 0.5em rgb(199, 199, 199);
+}
+
+#new-task-submit{
+    background-color: #3083FF;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    font-weight: bolder;
+    color: #0F4C94;
+    font-size: 1.3rem;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+#new-task-submit:hover{
+    transition: all 500ms ease-in-out;
+    background-color: #5599ff;
+}
+
+#new-task-submit:active{
+    transition: all 50ms ease-in-out;
+    color: #fff;
+}
+
+#tasks{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backgroundtasklight);
+    padding: 0.5rem;
+    border-radius: 3rem;
+    width: 50%;
+    max-width: 500px;
+    min-width: 200px;
+    align-items: center;
+    box-shadow: 0px 4px 0.5em rgb(199, 199, 199);
+}
+
+.text{
+    margin-left: 9px;
+    font-weight: bold;
+    width: 90%;
+    color: var(--textlight);
+}
+
+.text:not(:read-only){
+    color: #5599ff;
+}
+
+.checkTask{
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--backgroundtextbox);
+    border-radius: 5rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.checkTask:hover{
+    transition: all 0.5s ease-in-out;
+    background-color: #ccc;
+}
+
+.checkTask:checked{
+    background-color: #3083FF;
+}
+
+.actions{
+    margin-left: 1rem;
+}
+
+.edit:hover path{
+    transition: all 0.5s;
+    fill: var(--backgroundbutton);
+}
+
+.delete:hover path{
+    transition: all 0.5s;
+    fill: var(--backgroundbutton);
+}
+
+.darkmode:hover path{
+    transition: all 0.5s;
+    fill: var(--backgroundbutton);
+}
